@@ -1,0 +1,218 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-image: url('images/Online-Courses.jpg');
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  color: #2c3e50;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.navbar {
+  background-color: #148c2c;
+  padding: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #fff;
+  position: sticky;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+.logo {
+  font-size: 1.8rem;
+  font-weight: bold;
+}
+
+.nav-container {
+  display: flex;
+  gap: 20px;
+}
+
+.nav-item {
+  cursor: pointer;
+  text-decoration: none;
+  color: #fff;
+  background-color: #cd10d0;
+  padding: 8px 14px;
+  border-radius: 6px;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.nav-item:hover {
+  background-color: #cb94ed;
+  transform: translateY(-6px); /* লাফানো ইফেক্ট */
+}
+
+.home-section {
+  background-image: url('https://source.unsplash.com/1600x900/?education,learning');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  text-align: center;
+  padding: 60px 20px;
+  border-radius: 10px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.home-heading {
+  color: #000; /* কালো রঙ */
+}
+
+.tab {
+  display: none;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  margin: 30px auto;
+  max-width: 700px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.tab.active {
+  display: block;
+}
+
+.courses-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+  padding: 20px;
+}
+
+.course-btn {
+  border-radius: 16px;
+  padding: 15px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: none;
+}
+
+.course-btn img {
+  width: 60px;
+  height: 60px;
+  margin-bottom: 10px;
+}
+
+.course-btn h3 {
+  font-size: 1.2rem;
+  margin: 10px 0 5px;
+  color: #0b0b0b;
+}
+
+.course-btn p {
+  font-size: 0.9rem;
+  color: #555;
+}
+
+.course-btn:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* 🎨 প্রতিটি কোর্সের জন্য আলাদা রং */
+.course-btn[data-course="ওয়েব ডেভেলপমেন্ট"] {
+  background-color: #3498db; /* নীল */
+  color: white;
+}
+
+.course-btn[data-course="গ্রাফিক ডিজাইন"] {
+  background-color: #e74c3c; /* লাল */
+  color: white;
+}
+
+.course-btn[data-course="ডিজিটাল মার্কেটিং"] {
+  background-color: #f39c12; /* কমলা */
+  color: white;
+}
+
+.course-btn[data-course="অফিস অ্যাপলিকেশন"] {
+  background-color: #2ecc71; /* সবুজ */
+  color: white;
+}
+
+.course-btn[data-course="ডাটাবেস ম্যানেজমেন্ট"] {
+  background-color: #9b59b6; /* বেগুনি */
+  color: white;
+}
+
+.course-btn[data-course="লার্নিং ইংলিশ"] {
+  background-color: #1abc9c; /* ফিরোজা */
+  color: white;
+}
+
+/* হোভার ইফেক্ট */
+.course-btn:hover {
+  opacity: 0.8;
+  transform: scale(1.05);
+}
+
+.course-btn:hover h3 { color: #ff0000; }
+.course-btn:hover p { color: #fe0303; }
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+input, select, button {
+  padding: 14px;
+  border-radius: 8px;
+  border: 1px solid #888;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+input:focus, select:focus {
+  border-color: #1abc9c;
+  box-shadow: 0px 0px 8px rgba(26, 188, 156, 0.5);
+}
+
+button {
+  background-color: #148c2c;
+  color: #fff;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  background-color: #0f7a26;
+  transform: translateY(-3px);
+}
+
+
+footer {
+  text-align: center;
+  padding: 14px;
+  background-color: #2c2c2c;
+  color: #fff;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+}
+
+@media (max-width: 768px) {
+  body {
+    font-size: 14px;
+  }
+  .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }  
+}
+

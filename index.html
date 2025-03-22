@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ASRN Online Courses</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="navbar">
+    <div class="logo">🌐ASNRT Online Courses</div>
+    <nav class="nav-container">
+      <a href="#" onclick="showTab('home')" class="nav-item">Home</a>
+      <a href="#" onclick="showTab('courses')" class="nav-item">Our Courses</a>
+      <a href="#" onclick="showTab('register')" class="nav-item">Register</a>
+      <a href="#" onclick="showTab('login')" class="nav-item">Login</a>
+    </nav>
+  </header>
+
+  <main>
+    <section id="home" class="tab active home-section">
+      <h1 class="home-heading">🎉 অনলাইন কোর্সে আপনাকে স্বাগতম</h1>
+      <p class="home-heading">আমাদের প্ল্যাটফর্মের মাধ্যমে নতুন দক্ষতা অর্জন করুন এবং নিজেকে আরও সমৃদ্ধ করুন। আমাদের কোর্স সম্পর্কে বিস্তারিত জানতে নিচের “কোর্স দেখুন” বাটনে ক্লিক করুন।</p>
+      <button onclick="showTab('courses')">👉 কোর্স দেখুন</button>
+    </section>
+
+    <section id="courses" class="tab">
+      <h2>📚 আমাদের কোর্সসমূহ</h2>
+      <div class="courses-container">
+        <button class="course-btn" data-course="ওয়েব ডেভেলপমেন্ট">
+          <img src="images/webdesigner.jpg" alt="ওয়েব ডেভেলপমেন্ট">
+          <h3>🌐ওয়েব ডেভেলপমেন্ট</h3>
+          <p>ওয়েবসাইট তৈরি শিখুন</p>
+        </button>
+        <button class="course-btn" data-course="গ্রাফিক ডিজাইন">
+          <img src="images/Graphic.jpg" alt="গ্রাফিক ডিজাইন">
+          <h3>🎨গ্রাফিক ডিজাইন</h3>
+          <p>ডিজাইনের জগতে প্রবেশ করুন</p>
+        </button>
+        <button class="course-btn" data-course="ডিজিটাল মার্কেটিং">
+          <img src="images/WhatsApp Image 2023-10-04 at 11.25.21_c6f72ba4.jpg" alt="ডিজিটাল মার্কেটিং">
+          <h3>📢ডিজিটাল মার্কেটিং</h3>
+          <p>অনলাইন মার্কেটিং শিখুন</p>
+        </button>
+        <button class="course-btn" data-course="অফিস অ্যাপলিকেশন">
+          <img src="images/Office.jpg" alt="অফিস অ্যাপলিকেশন">
+          <h3>💻অফিস অ্যাপলিকেশন</h3>
+          <p>অফিস সফটওয়্যার মাস্টারি</p>
+        </button>
+        <button class="course-btn" data-course="ডাটাবেস ম্যানেজমেন্ট">
+          <img src="images/Database.jpg" alt="ডাটাবেস ম্যানেজমেন্ট">
+          <h3>🗄️ডাটাবেস ম্যানেজমেন্ট</h3>
+          <p>ডেটা হ্যান্ডলিং শিখুন</p>
+        </button>
+        <button class="course-btn" data-course="লার্নিং ইংলিশ">
+          <img src="images/learn-english-effectively.jpg" alt="লার্নিং ইংলিশ">
+          <h3>📝লার্নিং ইংলিশ</h3>
+          <p>ইংরেজি দক্ষতা বৃদ্ধি করুন</p>
+        </button>
+      </div>
+    
+    </section>
+    
+    <section id="course-details" class="tab">
+      <h2 id="course-title">কোর্সের বিবরণ</h2>
+      <p id="course-description"></p>
+      <button onclick="showTab('courses')">🔙 কোর্সে ফিরে যান</button>
+    </section>
+    
+    <section id="register" class="tab">
+      <h2>📝রেজিস্ট্রেশন ফরমটি পূরণ করুন</h2>
+      <form id="register-form">
+        <input type="text" id="name" placeholder="নাম" required />
+        <input type="email" id="email" placeholder="ইমেইল" required />
+        <select id="preferred-course" required>
+          <option value="" disabled selected>কোর্স নির্বাচন করুন</option>
+          <option value="ওয়েব ডেভেলপমেন্ট">🌐 ওয়েব ডেভেলপমেন্ট</option>
+          <option value="গ্রাফিক ডিজাইন">🎨 গ্রাফিক ডিজাইন</option>
+          <option value="ডিজিটাল মার্কেটিং">📈 ডিজিটাল মার্কেটিং</option>
+          <option value="অফিস অ্যাপলিকেশন">💻 অফিস অ্যাপলিকেশন</option>
+          <option value="ডাটাবেস ম্যানেজমেন্ট">🗄️ ডাটাবেস ম্যানেজমেন্ট</option>
+          <option value="লার্নিং ইংলিশ">📖 লার্নিং ইংলিশ</option>
+
+        </select>
+        <input type="password" id="password" placeholder="পাসওয়ার্ড" required />
+        <input type="password" id="confirm-password" placeholder="পাসওয়ার্ড নিশ্চিত" required />
+        <button type="submit">সাবমিট করুন</button>
+      </form>
+    </section>
+    
+
+    <section id="login" class="tab">
+      <h2>🔑 লগইন</h2>
+      <form id="login-form">
+        <input type="email" id="login-email" placeholder="ইমেইল" required />
+        <input type="password" id="login-password" placeholder="পাসওয়ার্ড" required />
+        <button type="submit">লগইন করুন</button>
+      </form>
+    </section>
+
+    <section id="profile" class="tab">
+      <h2>👤 প্রোফাইল</h2>
+      <p><strong>নাম:</strong> <span id="profile-name"></span></p>
+      <p><strong>ইমেইল:</strong> <span id="profile-email"></span></p>
+      <p><strong>কোর্স:</strong> <span id="profile-course"></span></p>
+      <button onclick="showTab('home')">🏠 হোমে ফিরে যান</button>
+    </section>
+  </main>
+
+  <footer>
+    © 2025 LMS Platform | সমস্ত অধিকার সংরক্ষিত।
+  </footer>
+  
+  <script src="script.js"></script>
+</body>
+</html>
